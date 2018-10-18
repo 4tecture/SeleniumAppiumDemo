@@ -1,0 +1,45 @@
+.calculator {
+  max-width: 400px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 7px;
+  min-width: 260px;
+  .title {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+  }
+  .field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    input {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      width: 130px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    button {
+      background: #ddd;
+      border: none;
+      margin-top: 5px;
+      padding: 13px 0;
+      border-radius: 7px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .result {
+    margin-top: 20px;
+  }
+}

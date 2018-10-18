@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>  
+    <!--Appium Server-->
+    <Parameter name="Appium.Server.RemoteAddress" value="http://127.0.0.1:4723/wd/hub"/>
+
+    <!--Appium Capabilities-->
+    <Parameter name="Appium.Cap.automationName" value="UiAutomator2" />
+    <Parameter name="Appium.Cap.platformName" value="Android" />
+    <Parameter name="Appium.Cap.platformVersion" value="8.0" />
+    <Parameter name="Appium.Cap.deviceName" value="Samsung SM-G930F" />
+    <Parameter name="Appium.Cap.appName" value="CalculatorDemo.Android" />
+    <Parameter name="Appium.Cap.appPackage" value="com.companyname.CalculatorDemo" />
+    <Parameter name="Appium.Cap.appActivity" value="md5fe16d9bce0e601e22ad611d89fb19d24.MainActivity" />
+    <Parameter name="Appium.Cap.newCommandTimeout" value="180" />
+  </TestRunParameters>
+</RunSettings>

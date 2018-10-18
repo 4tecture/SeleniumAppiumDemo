@@ -1,0 +1,25 @@
+﻿<Window x:Class="SimpleCalculatorWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simple Calculator" Height="350" Width="525">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" x:Name="MainPanel">
+        <Label Content="Simple Calulator Application" FontSize="18" FontWeight="Bold" x:Name="Title" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" x:Name="InputPanel">
+            <TextBox Text="{Binding FirstNumber}" Margin="0, 40, 40,40" Width="150"  FontSize="18" x:Name="txtFirstNumber" AutomationProperties.AutomationId="SimpleCalculatorTxtFirstNumber" AutomationProperties.Name="InputNumber1"  />
+            <TextBox Text="{Binding SecondNumber}" Margin="40, 40, 0,40" Width="150"  FontSize="18" x:Name="txtSecondNumber" AutomationProperties.AutomationId="SimpleCalculatorTxtSecondNumber" AutomationProperties.Name="InputNumber2"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" x:Name="ButtonPanel">
+            <Button Content="Add" Command="{Binding AddCommand}" Margin="0,10,10,10" Width="80"  FontSize="18" x:Name="btnAdd" AutomationProperties.AutomationId="SimpleCalculatorBtnAdd" AutomationProperties.Name="AddNumbers" />
+            <Button Content="Subtract" Command="{Binding SubtractCommand}" Margin="10" Width="80"  FontSize="18"  x:Name="btnSubtract" AutomationProperties.AutomationId="SimpleCalculatorBtnSubtract" AutomationProperties.Name="SubtractNumbers" />
+            <Button Content="Multiply" Command="{Binding MultiplyCommand}" Margin="10" Width="80"  FontSize="18"  x:Name="btnMultiply" AutomationProperties.AutomationId="SimpleCalculatorBtnMultiply" AutomationProperties.Name="MultiplyNumbers" />
+            <Button Content="Divide" Command="{Binding DivideCommand}" Margin="10,10,0,10" Width="80"  FontSize="18"   x:Name="btnDivide" AutomationProperties.AutomationId="SimpleCalculatorBtnDivide" AutomationProperties.Name="DivideNumbers"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" x:Name="ResultPanel">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="0, 40, 40,40" Width="150">Result:</Label>
+                <TextBox Text="{Binding Result}" Margin="40, 40, 0,40" Width="150" FontSize="18"  IsReadOnly="True" x:Name="txtResult" AutomationProperties.AutomationId="SimpleCalculatorTxtResult" AutomationProperties.Name="ResultingNumber"/>
+            </StackPanel>
+            <Label Content="{Binding ErrorMessage}" FontSize="18" Foreground="Red" x:Name="lblErrorMessage" AutomationProperties.AutomationId="SimpleCalculatorLblError" AutomationProperties.Name="CalculationError"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
